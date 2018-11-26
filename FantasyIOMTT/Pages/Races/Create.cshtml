@@ -1,0 +1,69 @@
+﻿@page
+@model FantasyIOMTT.Pages.Races.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Races</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Races.ClassName" class="control-label"></label>
+                <input asp-for="Races.ClassName" class="form-control" />
+                <span asp-validation-for="Races.ClassName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.RaceDate" class="control-label"></label>
+                <input asp-for="Races.RaceDate" class="form-control" />
+                <span asp-validation-for="Races.RaceDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.RaceTime" class="control-label"></label>
+                <input asp-for="Races.RaceTime" class="form-control" />
+                <span asp-validation-for="Races.RaceTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.Laps" class="control-label"></label>
+                <input asp-for="Races.Laps" class="form-control" />
+                <span asp-validation-for="Races.Laps" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.RecordLapMPH" class="control-label"></label>
+                <input asp-for="Races.RecordLapMPH" class="form-control" />
+                <span asp-validation-for="Races.RecordLapMPH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.RecordLapTime" class="control-label"></label>
+                <input asp-for="Races.RecordLapTime" class="form-control" />
+                <span asp-validation-for="Races.RecordLapTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.RecordRaceMPH" class="control-label"></label>
+                <input asp-for="Races.RecordRaceMPH" class="form-control" />
+                <span asp-validation-for="Races.RecordRaceMPH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Races.RecordRaceTime" class="control-label"></label>
+                <input asp-for="Races.RecordRaceTime" class="form-control" />
+                <span asp-validation-for="Races.RecordRaceTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
